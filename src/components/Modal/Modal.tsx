@@ -8,23 +8,27 @@ type ModalProps = {
   isOpen: boolean;
 };
 
-const modalOverlayStyle = css`
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
+const modalOverlayStyle = css({
+  position: "fixed",
+  inset: 0,
+  backgroundColor: "rgba(0, 0, 0, 0.5)",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  overflowY: "auto",
+  padding: "16px",
+});
 
-const modalContentStyle = css`
-  background: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  width: 90%;
-  max-width: 600px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-`;
+const modalContentStyle = css({
+  backgroundColor: "#ffffff",
+  borderRadius: "10px",
+  padding: "26px",
+  maxWidth: "600px",
+  width: "100%",
+  maxHeight: "90vh",
+  overflowY: "auto",
+  boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+});
 
 const Modal: React.FC<ModalProps> = ({ children, isOpen }) => {
   if (!isOpen) return null;
