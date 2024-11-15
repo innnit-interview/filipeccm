@@ -19,6 +19,12 @@ const theme = {
     bold: "'Soehne Kraeftig', Arial, sans-serif",
     heavy: "'Soehne Dreiviertelfett', Arial, sans-serif",
   },
+  fontSizes: {
+    helper: 12,
+    default: 16,
+    h5: 25,
+    h4: 31.25,
+  },
 };
 
 function App() {

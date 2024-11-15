@@ -16,5 +16,11 @@ declare module "@emotion/react" {
       bold: string;
       heavy: string;
     };
+    fontSizes: {
+      helper: number;
+      default: number;
+      h5: number;
+      h4: number;
+    };
   }
 }
