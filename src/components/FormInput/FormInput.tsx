@@ -34,6 +34,8 @@ const FormInput: React.FC<FormFieldProps> = ({
     borderRadius: "4px",
     resize: type === "textarea" ? "none" : "initial",
     minHeight: type === "textarea" ? 140 : "",
+    fontSize: theme.fontSizes.default,
+    fontWeight: 400,
   });
 
   return (
