@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import FormInput from "../FormInput/FormInput";
-import { css, useTheme } from "@emotion/react";
+import { css, Theme, useTheme } from "@emotion/react";
 import Button from "../Button/Button";
 import Toggle from "../Toggle/Toggle";
 import { FormLabel } from "../FormLabel/FormLabel";
@@ -29,11 +29,12 @@ const buttonsWrapper = css({
   },
 });
 
-const successMessagesStyle = css({
-  color: "green",
-  marginTop: "16px",
-  fontSize: "14px",
-});
+const successMessagesStyle = (theme: Theme) =>
+  css({
+    color: "green",
+    marginTop: "16px",
+    fontSize: theme.fontSizes.helper,
+  });
 
 const FormComponent: React.FC = () => {
   const [isAuthorEditable, setIsAuthorEditable] = useState(false);
@@ -79,8 +80,8 @@ const FormComponent: React.FC = () => {
     >
       <h2
         css={{
-          fontSize: "31.25px",
-          fontWeight: "bold",
+          fontSize: theme.fontSizes.h4,
+          fontWeight: 500,
           marginBottom: "26px",
           color: theme.colors.primary,
         }}
@@ -128,13 +129,13 @@ const FormComponent: React.FC = () => {
               label={"Absender ändern"}
             />
           </div>
-          <p css={{ fontSize: 16 }}>
+          <p>
             Hier hast du die Option, das Update unter einem anderen Namen zu
             veröffentlichen.
           </p>
           <span
             css={{
-              fontSize: 12,
+              fontSize: theme.fontSizes.helper,
               marginBottom: -8,
               color: theme.colors.helper,
               fontWeight: "bold",
@@ -157,7 +158,9 @@ const FormComponent: React.FC = () => {
         <Button variant="secondary" label={"Update veröffentlichen"} />
       </div>
       {successMessage && (
-        <p css={successMessagesStyle}>Entwurf erfolgreich gespeichert!</p>
+        <p css={successMessagesStyle(theme)}>
+          Entwurf erfolgreich gespeichert!
+        </p>
       )}
     </form>
   );

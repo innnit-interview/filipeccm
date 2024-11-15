@@ -10,8 +10,7 @@ export const FormLabel: React.FC<FormLabelProps> = ({ htmlFor, label }) => {
   const theme = useTheme();
 
   const labelStyle = css({
-    fontSize: "25px",
-    fontWeight: "bold",
+    fontSize: theme.fontSizes.h5,
     display: "block",
     color: theme.colors.secondary,
   });

@@ -62,7 +62,7 @@ const Toggle: React.FC<ToggleProps> = ({ isToggled, onToggle, label }) => {
           <div css={toggleCircleStyle(isToggled, theme)} />
         </div>
       </div>
-      <label id="toggle-label" css={{ fontSize: 12 }}>
+      <label id="toggle-label" css={{ fontSize: theme.fontSizes.helper }}>
         {label}
       </label>
     </div>

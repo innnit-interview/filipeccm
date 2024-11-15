@@ -20,8 +20,8 @@ const Button: React.FC<ButtonProps> = ({
   const styles = {
     base: css({
       width: "fit-content",
+      fontSize: theme.fontSizes.default,
       padding: "12px 24px",
-      fontSize: 16,
       borderRadius: "100px",
       cursor: "pointer",
       alignItems: "center",

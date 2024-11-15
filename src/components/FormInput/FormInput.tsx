@@ -66,7 +66,7 @@ const FormInput: React.FC<FormFieldProps> = ({
           <p
             css={{
               color: theme.colors.error,
-              fontSize: "12px",
+              fontSize: theme.fontSizes.helper,
             }}
           >
             {error}
@@ -75,7 +75,7 @@ const FormInput: React.FC<FormFieldProps> = ({
         {maxLength && (
           <p
             css={{
-              fontSize: "12px",
+              fontSize: theme.fontSizes.helper,
               marginLeft: "auto",
               color: theme.colors.helper,
             }}
